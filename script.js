@@ -1,4 +1,4 @@
-let getHumanChoice = () => prompt("Input rock, paper, or scissors: ").toLowerCase().trim();
+// let getHumanChoice = () => prompt("Input rock, paper, or scissors: ").toLowerCase().trim();
 function getComputerChoice() {
   switch (Math.floor(Math.random() * 3)) {
     case 0:
