@@ -4,8 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="script.js"></script>
-  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Rock, Paper, Scissors</title>
 </head>
+  <h1>ROCK PAPER OR SCISSORS</h1>
+  <div class="score">
+    <div id="computerScore">Computer: 0</div>
+    <div id="humanScore">Human: 0</div>
+  </div>
+  <label for="humanChoice">Choose one:</label>
+  <select class="humanChoice" name="humanChoice" id="humanChoice">
+    <option value="rock">Rock</option>
+    <option value="paper">Paper</option>
+    <option value="scissors">Scissors</option>
+  </select> 
+  <button class="enterButton">Enter</button>
+  <div class="comments" id="comments">First one to 5 wins</div>
 <body>
 </body>
 </html>
