@@ -33,7 +33,6 @@ function playRound(humanChoice, computerChoice) {
   return isHumanWin;
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const enterButton = document.querySelector('.enterButton');
   const humanChoice = document.querySelector('.humanChoice');
@@ -53,15 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       comments.innerHTML = 'TIE :O';
     }
-    if ((humanScore + computerScore === 5) || (humanScore === 4) || (computerScore === 4)) {
+    if ((humanScore===5)||(computerScore===5)){
       if (humanScore > computerScore) {
-        comments.innerHTML = 'FINALLY YOU WIN';
+        comments.innerHTML = 'CONGRATULATIONS YOU WIN!!!';
       } else {
         comments.innerHTML = 'YOU LOSE TRY AGAIN';
       }
     }
   });
 });
-
-
 
