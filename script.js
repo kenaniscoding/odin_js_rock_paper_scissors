@@ -39,28 +39,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const humanChoice = document.querySelector('.humanChoice');
   const humanScoreTxt = document.getElementById('humanScore');
   const computerScoreTxt = document.getElementById('computerScore');
+  const comments = document.getElementById('comments');
   enterButton.addEventListener("click", () => {
     const computerSelection = getComputerChoice();
     const humanSelection = humanChoice.value;
     const isHumanWin = playRound(humanSelection, computerSelection);
     if (isHumanWin === 1) {
-      alert('HUMAN WINS');
       humanScoreTxt.innerHTML = 'Human: ' + humanScore;
+      comments.innerHTML = 'human wins :)';
     } else if (isHumanWin === 0) {
       computerScoreTxt.innerHTML = 'Computer: ' + computerScore;
-      alert('AI WINS');
+      comments.innerHTML = 'computer wins ;_;';
     } else {
-      alert('TIE');
+      comments.innerHTML = 'TIE :O';
+    }
+    if ((humanScore + computerScore === 5) || (humanScore === 4) || (computerScore === 4)) {
+      if (humanScore > computerScore) {
+        comments.innerHTML = 'FINALLY YOU WIN';
+      } else {
+        comments.innerHTML = 'YOU LOSE TRY AGAIN';
+      }
     }
   });
 });
-// while (humanScore + computerScore != 5) {
-//   const humanSelection = getHumanChoice();
-//   const computerSelection = getComputerChoice();
-//
-//   playRound(humanSelection, computerSelection);
-//
-// }
 
 
 
